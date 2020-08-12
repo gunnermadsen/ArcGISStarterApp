@@ -15,6 +15,9 @@
 		80AF1DBE24E463E600A61BAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80AF1DBC24E463E600A61BAC /* LaunchScreen.storyboard */; };
 		80AF1DC924E463E600A61BAC /* ArcGIS_Starter_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AF1DC824E463E600A61BAC /* ArcGIS_Starter_AppTests.swift */; };
 		80AF1DD424E463E600A61BAC /* ArcGIS_Starter_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AF1DD324E463E600A61BAC /* ArcGIS_Starter_AppUITests.swift */; };
+		80AF1DE324E4645700A61BAC /* ArcGIS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80AF1DE224E4645700A61BAC /* ArcGIS.framework */; };
+		80AF1DE424E4645700A61BAC /* ArcGIS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 80AF1DE224E4645700A61BAC /* ArcGIS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		80AF1DE724E4864800A61BAC /* AppPrivate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AF1DE624E4864800A61BAC /* AppPrivate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		80AF1DE524E4645700A61BAC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				80AF1DE424E4645700A61BAC /* ArcGIS.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		80AF1DAE24E463E300A61BAC /* ArcGIS Starter App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ArcGIS Starter App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		80AF1DB124E463E300A61BAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +66,8 @@
 		80AF1DCF24E463E600A61BAC /* ArcGIS Starter AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ArcGIS Starter AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		80AF1DD324E463E600A61BAC /* ArcGIS_Starter_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcGIS_Starter_AppUITests.swift; sourceTree = "<group>"; };
 		80AF1DD524E463E600A61BAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80AF1DE224E4645700A61BAC /* ArcGIS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ArcGIS.framework; path = ../../../Library/SDKs/ArcGIS/iOS/Frameworks/Dynamic/ArcGIS.framework; sourceTree = "<group>"; };
+		80AF1DE624E4864800A61BAC /* AppPrivate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPrivate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80AF1DE324E4645700A61BAC /* ArcGIS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +103,7 @@
 				80AF1DC724E463E600A61BAC /* ArcGIS Starter AppTests */,
 				80AF1DD224E463E600A61BAC /* ArcGIS Starter AppUITests */,
 				80AF1DAF24E463E300A61BAC /* Products */,
+				80AF1DE124E4645700A61BAC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +124,7 @@
 				80AF1DB324E463E300A61BAC /* SceneDelegate.swift */,
 				80AF1DB524E463E300A61BAC /* ViewController.swift */,
 				80AF1DB724E463E300A61BAC /* Main.storyboard */,
+				80AF1DE624E4864800A61BAC /* AppPrivate.swift */,
 				80AF1DBA24E463E600A61BAC /* Assets.xcassets */,
 				80AF1DBC24E463E600A61BAC /* LaunchScreen.storyboard */,
 				80AF1DBF24E463E600A61BAC /* Info.plist */,
@@ -128,6 +150,14 @@
 			path = "ArcGIS Starter AppUITests";
 			sourceTree = "<group>";
 		};
+		80AF1DE124E4645700A61BAC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				80AF1DE224E4645700A61BAC /* ArcGIS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,6 +168,7 @@
 				80AF1DAA24E463E300A61BAC /* Sources */,
 				80AF1DAB24E463E300A61BAC /* Frameworks */,
 				80AF1DAC24E463E300A61BAC /* Resources */,
+				80AF1DE524E4645700A61BAC /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -262,6 +293,7 @@
 				80AF1DB624E463E300A61BAC /* ViewController.swift in Sources */,
 				80AF1DB224E463E300A61BAC /* AppDelegate.swift in Sources */,
 				80AF1DB424E463E300A61BAC /* SceneDelegate.swift in Sources */,
+				80AF1DE724E4864800A61BAC /* AppPrivate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +468,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MB7FQRJ43P;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/SDKs/ArcGIS/iOS/Frameworks/Dynamic",
+				);
 				INFOPLIST_FILE = "ArcGIS Starter App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -454,6 +490,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MB7FQRJ43P;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/SDKs/ArcGIS/iOS/Frameworks/Dynamic",
+				);
 				INFOPLIST_FILE = "ArcGIS Starter App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

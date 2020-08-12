@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ArcGIS
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        licenseApplication()
         return true
     }
 
@@ -35,3 +37,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+
+extension AppDelegate {
+    func licenseApplication() {
+        do {
+            try AGSArcGISRuntimeEnvironment.setLicenseKey(.licenseKey)
+        } catch {
+            print("[error: AGSArcGISRuntimeEnvironment] Error Licensing App: \(error.localizedDescription)")
+        }
+    }
+}
